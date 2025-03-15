@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore;
 using (var context = new AppDBContext())
 {
     var employees = context.Employees.Include(e => e.EmployeeDetails).ToList();
-    foreach (var emp in employees)
+    /*foreach (var emp in employees)
     {
         Console.WriteLine($"Id: {emp.EmployeeDetails.EmployeeId}; Name: {emp.FirstName}; Address: {emp.EmployeeDetails.Address};");
-    }
+    }*/
 
     //Retrieve and display all the employees
     var employees1 = context.Employees.ToList();
